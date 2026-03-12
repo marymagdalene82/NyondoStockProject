@@ -13,26 +13,88 @@
   </head>
 
   <body>
-    
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img src="./images/19368.jpg" class="img-fluid" />
+        </div>
+        <div class="col-6">
+          <h1>Welcome back to Nyondo</h1>
+          <p>
+            Manage stock, sales, accounts and transport with this powerful
+            system
+          </p>
+          <form>
+            <div class="container">
+              <div class="row">
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="admin"
+                      id="admin"
+                      value="admin"
+                    />
+                    <label class="form-check-label" for="admin"
+                      >Accounts/Admin</label
+                    >
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="storeManager"
+                      id="storeManager"
+                      value="storeManager"
+                    />
+                    <label class="form-check-label" for="storeManager"
+                      >Store Manager</label
+                    >
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="salesAttendant"
+                      id="salesAttendant"
+                      value="salesAttendant"
+                    />
+                    <label class="form-check-label" for="salesAttendant"
+                      >Sales Attendant</label
+                    >
+                  </div>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="name@gmail.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="password"
+                  />
+                </div>
+                <button class="btn btn-primary login">Log In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
