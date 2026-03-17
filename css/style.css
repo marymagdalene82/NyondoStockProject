@@ -2,6 +2,8 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .auth-layout {
@@ -80,4 +82,73 @@ body {
   .login {
     width: 100%;
   }
+}
+
+/* Manager Dashboard */
+.sidebar-layout {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 250px;
+
+  position: fixed;
+
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+
+.sidebar-section-label {
+  color: #504e4c;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 12px 0 6px;
+}
+.nav-link {
+  color: #504e4c;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-item {
+  margin-bottom: 15px;
+  background: #e7e7e5;
+  border-radius: 8px;
+}
+.active {
+  background: #a6a29f;
+  color: #fff;
+  border-radius: 8px;
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 20px;
+
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+
+  transition: all 0.2s;
+}
+.nav a:hover {
+  background: #a6a29f;
+  color: #fff;
+  border-radius: 8px;
+}
+.logout a {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  padding: 10px;
+  display: flex;
+
+  gap: 12px;
+}
+.logout a:hover {
+  background: #a6a29f;
+  color: #fff;
+  border-radius: 8px;
 }
