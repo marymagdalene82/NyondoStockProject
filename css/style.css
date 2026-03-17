@@ -86,20 +86,18 @@ body {
 
 /* Manager Dashboard */
 .sidebar-layout {
+  margin-top:10px;
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width:280px;
-  top:0;
-  left:0;
-
+  width: 280px;
+  top: 0;
+  left: 0;
   position: fixed;
-
   z-index: 1000;
   overflow-y: auto;
 }
-
 
 .sidebar-section-label {
   color: #504e4c;
@@ -129,11 +127,9 @@ body {
   align-items: center;
   gap: 12px;
   padding: 11px 20px;
-
   text-decoration: none;
   font-size: 13.5px;
   font-weight: 500;
-
   transition: all 0.2s;
 }
 .nav a:hover {
@@ -146,11 +142,65 @@ body {
   margin-bottom: 80px;
   padding: 10px;
   display: flex;
-
   gap: 12px;
 }
 .logout a:hover {
   background: #a6a29f;
   color: #fff;
   border-radius: 8px;
+}
+
+/* Main Content*/
+.main-wrapper {
+  margin-left: 275px;
+ 
+  width: calc(100% - 275px);
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  background: #f6f6f6;
+  border-radius:9px;
+  margin: 10px 3px 0;
+  padding: 10px 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+
+  
+}
+.topbar-user{
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 10px;
+ 
+  
+}
+small{
+  color: #504e4c;
+  font-size: 12px;
+  display: block;
+  margin-top: 1px;
+}
+h6{
+  color: #504e4c;
+  font-size: 14px;
+  margin: 0;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #D7B995;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  object-fit: cover;
 }
