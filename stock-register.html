@@ -1,11 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
-    
+    <!-- Sidebar -->
+    <div class="container-fluid sidebar-layout">
+        <div class="row">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="./images/Nyondo.png" alt="Nyondo Logo" width="180px" />
+                </div>
+                <div class="sidebar-section-label">MAIN</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard-storemanager.html"><i class="bi bi-speedometer"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-receipt-cutoff"></i>Sales Overview</a>
+                    </li>
+                </ul>
+                <div class="sidebar-section-label">STOCK MANAGEMENT</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="stock-register.html"><i class="bi bi-plus-circle"></i>Register
+                            Stock</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stock-list.html"><i class="bi bi-card-list"></i>Stock List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="transport-calculator.html"><i class="bi bi-truck"></i>Transport
+                            Calculator</a>
+                    </li>
+                </ul>
+                <div class="sidebar-section-label">PEOPLE</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="suppliers.html"><i
+                                class="bi bi-building"></i>Suppliers</a>
+                    </li>
+                </ul>
+
+                <div class="logout">
+                    <a class="nav-link" href="index.html"><i class="bi bi-box-arrow-right"></i>Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid main-wrapper">
+        <div class="topbar">
+            <div class="salutations">
+                <h5>Register New Stock</h5>
+                <h6>Add a new product</h6>
+            </div>
+            <div class="topbar-user">
+                <div class="user-info">
+                    <h6>Rita A</h6>
+                    <small>Store Manager</small>
+                </div>
+                <div class="avatar">
+                    <img src="./images/happy.png" alt="User Avatar" width="40px" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid form-container">
+            <div class="row">
+                <div class="col form-area">
+                    <!-- Form Area -->
+                    <form action="">
+                        <div class="form-heading">
+                            <h5>Product Details</h5>
+                            <h6>Fill in all the fields</h6>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" placeholder="e.g Hima Cement"
+                                    aria-label="Product name" />
+                            </div>
+                        </div>
+
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Product Code</label>
+                                <input type="text" class="form-control" placeholder="SUP-001"
+                                    aria-label="Product code" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Category</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option disabled selected>Select Category</option>
+                                    <option value="building">Building materials</option>
+                                    <option value="electrical">Electrical</option>
+                                    <option value="paints">Paints & finishes</option>
+                                    <option value="tools">Hardware & tools</option>
+                                    <option value="roofing">Roofing</option>
+                                    <option value="timber">Timber & Wood</option>
+                                    <option value="general">General/mixed</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Unit of measure</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option disabled selected>Select Unit of measure</option>
+                                    <option value="bag">Bag</option>
+                                    <option value="box">Box</option>
+                                    <option value="piece">Piece</option>
+                                    <option value="roll">Roll</option>
+                                    <option value="set">Set</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row my-4">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Cost Price(UGX)</label>
+                                <input type="number" class="form-control" aria-label="Cost price" />
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Selling Price(UGX)</label>
+                                <input type="number" class="form-control" aria-label="Selling price" />
+                            </div>
+                        </div>
+
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Qty in stock</label>
+                                <input type="number" class="form-control" aria-label="quantity in stock" />
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Minimum Stock Level</label>
+                                <input type="number" class="form-control" aria-label="Minimum stock level" />
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Qty Received</label>
+                                <input type="number" class="form-control" aria-label="Qty received" />
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Supplier</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option disabled selected>Select Supplier</option>
+                                    <option value="supplier1">Tororo Cement</option>
+                                    <option value="supplier2">Hima cement</option>
+                                    <option value="supplier3">Steel & Tube</option>
+                                    <option value="roll">Hardware World</option>
+                                    <option value="set">Seroma Ltd</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" class="form-label">Date Received</label>
+                                <input type="date" class="form-control" aria-label="Date received" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" class="btn btn-primary">
+                                    Save Stock
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button type="reset" class="btn btn-outline-dark">
+                                    Reset
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+
+                
+                    <div class="section-card mb-3">
+                        <div class="section-card-header">
+                            <div>
+                                <h6>Registration Tips</h6>
+                            </div>
+                        </div>
+                        <div class="section-card-body">
+                            <div class="alert-strip info mb-2" style="font-size:12px;">
+                                <i class="bi bi-info-circle-fill"></i>
+                                Set minimum stock level so alerts trigger automatically.
+                            </div>
+                            <div class="alert-strip info mb-2" style="font-size:12px;">
+                                <i class="bi bi-info-circle-fill"></i>
+                                Selling price should include any transport costs.
+                            </div>
+                            <div class="alert-strip info" style="font-size:12px;">
+                                <i class="bi bi-info-circle-fill"></i>
+                                Use a unique SKU code per product variant.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card recently-added" style="width: 18rem;" >
+                        <div class="card-header">
+                            <h6>Recently Added</h6>
+                            <span>Last 5 items recently added</span>
+                        </div>
+                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item<span class="badge-pill badge-success">200 pcs</span></li>
+                            <li class="list-group-item">A second item<span class="badge-pill badge-success">150 pcs</span></li>
+                            <li class="list-group-item">A third item<span class="badge-pill badge-success">300 pcs</span></li>
+                            <li class="list-group-item">An fourth item<span class="badge-pill badge-success">200 pcs</span></li>
+                            <li class="list-group-item">A fifth item<span class="badge-pill badge-success">150 pcs</span></li>
+                        </ul>
+                        
+                    </div>
+                </div>
 </body>
+
 </html>
