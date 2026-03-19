@@ -442,6 +442,11 @@ h6 {
 
 /* Desktop and up */
 @media (min-width: 992px) {
+  .stock-register-layout {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
   .sidebar-layout {
     margin-top: 10px;
     width: 280px;
