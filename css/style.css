@@ -6,23 +6,26 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Auth (mobile first) */
 .auth-layout {
   min-height: 100vh;
   padding: 0;
 }
 
 .auth-row {
-  height: 100%;
   min-height: 100vh;
 }
 
-.image-pane,
 .form-pane {
   min-height: 100vh;
+  background: #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-pane {
-  display: flex;
+  display: none;
 }
 
 .signup-image {
@@ -31,24 +34,33 @@ body {
   object-fit: cover;
 }
 
-.form-pane {
-  background: #101010;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .login-form-area {
   width: min(100%, 520px);
-  padding: 48px 40px;
+  padding: 32px 5px;
+  margin: 5px;
+}
+
+.login-mobile-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  
+}
+
+.login-mobile-logo {
+  width: 120px;
+  height: auto;
+ 
 }
 
 .login {
-  color: white;
+  color: #fff;
   background-color: #737373;
-  width: 50%;
+  display: block;
+  width: min(100%, 220px);
   margin: 0 auto;
 }
+
 .login:hover {
   background-color: #fff;
   color: #000;
@@ -58,44 +70,29 @@ body {
   color: #fff;
   font-size: 13px;
 }
+
 .login-form-area p {
   font-size: 14px;
   color: #fff;
+  text-align: center;
 }
+
 .login-form-area h3 {
   color: #fff;
   font-size: 25px;
   text-align: center;
 }
 
-@media (max-width: 767.98px) {
-  .image-pane,
-  .form-pane {
-    min-height: 50vh;
-  }
-
-  .login-form-area {
-    padding: 32px 20px;
-  }
-
-  .login {
-    width: 100%;
-  }
-}
-
-/* Manager Dashboard */
+/* Manager dashboard shell (mobile first) */
 .sidebar-layout {
-  margin-top:10px;
+  margin-top: 0;
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 280px;
-  top: 0;
-  left: 0;
-  position: fixed;
-  z-index: 1000;
-  overflow-y: auto;
+  width: 100%;
+  position: static;
+  z-index: auto;
+  overflow-y: visible;
 }
 
 .sidebar-section-label {
@@ -106,21 +103,25 @@ body {
   text-transform: uppercase;
   padding: 12px 0 6px;
 }
+
 .nav-link {
   color: #504e4c;
   padding: 10px;
   cursor: pointer;
 }
+
 .nav-item {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   background: #e7e7e5;
   border-radius: 8px;
 }
+
 .active {
   background: #a6a29f;
   color: #fff;
   border-radius: 8px;
 }
+
 .nav a {
   display: flex;
   align-items: center;
@@ -131,75 +132,77 @@ body {
   font-weight: 500;
   transition: all 0.2s;
 }
+
 .nav a:hover {
   background: #a6a29f;
   color: #fff;
   border-radius: 8px;
 }
+
 .logout a {
-  margin-top: 30px;
-  margin-bottom: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
   display: flex;
   gap: 12px;
 }
+
 .logout a:hover {
   background: #a6a29f;
   color: #fff;
   border-radius: 8px;
 }
 
-/* Main Content*/
 .main-wrapper {
-  margin-left: 275px;
- 
-  width: calc(100% - 275px);
+  margin-left: 0;
+  width: 100%;
   box-sizing: border-box;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
 }
+
 .topbar {
   background: #f6f6f6;
-  border-radius:9px;
+  border-radius: 9px;
   margin: 10px 3px 5px;
-  padding: 10px 20px;
+  padding: 10px 12px;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1001;
-
-  
 }
-.topbar-user{
+
+.topbar-user {
   display: flex;
-  margin-left: auto;
+  margin-left: 0;
   align-items: center;
   gap: 10px;
- 
-  
 }
-small{
+
+small {
   color: #504e4c;
   font-size: 12px;
   display: block;
   margin-top: 1px;
 }
-h6{
+
+h6 {
   color: #504e4c;
   font-size: 14px;
   margin: 0;
- 
 }
+
 .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #D7B995;
+  background: #d7b995;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,7 +211,37 @@ h6{
   font-size: 18px;
   object-fit: cover;
 }
-/* ---- ALERT STRIPS ---- */
+
+.main-manager-dashboard {
+  background: #f6f6f6;
+  border-radius: 10px;
+  margin: 0 3px;
+  padding: 10px 12px;
+}
+
+.dashboard-card {
+  border-radius: 8px;
+  color: #504e4c;
+  border: none;
+}
+
+.total-stock-card {
+  background: #e3ffcd;
+}
+
+.low-stock-card {
+  background: #ffdbce;
+}
+
+.total-stock-value-card {
+  background: #fff5d6;
+}
+
+.pending-deliveries-card {
+  background: #d7e3ff;
+}
+
+/* Shared alert strips */
 .alert-strip {
   border-radius: 10px;
   padding: 12px 16px;
@@ -220,74 +253,60 @@ h6{
   margin-bottom: 10px;
 }
 
-.alert-strip.warning { background: #fef3c7; color: #92400e;  }
-.alert-strip.danger { background: #fee2e2; color: #991b1b; margin-top:10px;}
-.alert-strip.info { background: #dbeafe; color: #1e40af; }
-.alert-strip.success { background: #d1fae5; color: #065f46;  }
-.main-manager-dashboard{
-  background: #f6f6f6;
-  border-radius:10px;
-  margin: 0 3px 0;
-  padding: 10px 20px;
-}
-.dashboard-card {
- 
-  border-radius: 8px;
-  
-  color: #504e4c;
-  border:none;
-}
-.total-stock-card{
-  background: #E3FFCD;
-}
-.low-stock-card{
-  background: #FFDBCE;
-}
-.total-stock-value-card{
-  background: #FFF5D6;
-}
-.pending-deliveries-card{
-  background: #D7E3FF;
+.alert-strip.warning {
+  background: #fef3c7;
+  color: #92400e;
 }
 
-/* Stock Registration */
+.alert-strip.danger {
+  background: #fee2e2;
+  color: #991b1b;
+  margin-top: 10px;
+}
+
+.alert-strip.info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.alert-strip.success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Stock registration */
 .form-heading {
   margin-bottom: 20px;
   border-bottom: 1px solid gray;
 }
 
 .form-container {
-  
-  background-attachment: fixed;
   background: #f6f6f6;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .form-area {
   background: #fff;
-  padding: 20px;
+  padding: 16px;
   border-radius: 19px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 24px 0px 0 15px;
-  
-  
+  margin: 12px 0 0;
 }
 
 .form-container .form-area label {
   color: #1f2937;
 }
 
-
 .section-card {
   background: #fff;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
   overflow: hidden;
-  margin: 24px 10px 0 0px;
+  margin: 12px 0 0;
 }
 
 .section-card-header {
-  padding: 18px 24px;
+  padding: 18px 20px;
   border-bottom: 1px solid #595859;
   display: flex;
   align-items: center;
@@ -303,26 +322,30 @@ h6{
 
 .section-card-header p {
   font-size: 12px;
-  color:  #64748b;
+  color: #64748b;
   margin: 0;
 }
 
 .section-card-body {
   padding: 20px 14px;
 }
+
 .card.recently-added {
+  width: 100%;
   background: #fff;
   border-radius: 14px;
   border: 1px solid #e2e8f0;
   overflow: hidden;
-  margin: 24px 10px 0 0px;
+  margin: 12px 0 16px;
 }
-.card-header h6{
+
+.card-header h6 {
   color: #000;
   font-size: 14px;
-  font-weight:600
+  font-weight: 600;
 }
-.card-header span{
+
+.card-header span {
   color: #64748b;
   font-size: 12px;
 }
@@ -334,7 +357,6 @@ h6{
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
-  
 }
 
 .list-group-item {
@@ -346,9 +368,99 @@ h6{
   margin-left: auto;
 }
 
-.badge-success { background: #d1fae5; color: #065f46; }
-.badge-warning { background: #fef3c7; color: #92400e; }
-.badge-danger { background: #fee2e2; color: #991b1b; }
-.badge-info { background: #dbeafe; color: #1e40af; }
-.badge-secondary { background: #f1f5f9; color: #475569; }
-.badge-purple { background: #ede9fe; color: #5b21b6; }
+.badge-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-secondary {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.badge-purple {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .image-pane {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .login-mobile-brand {
+    display: none;
+  }
+
+  .login-form-area {
+    padding: 48px 20px;
+  }
+
+  .login {
+    width: 50%;
+  }
+
+  .topbar {
+    padding: 10px 20px;
+  }
+
+  .topbar-user {
+    margin-left: auto;
+  }
+
+  .main-manager-dashboard {
+    padding: 10px 20px;
+  }
+
+  .form-area {
+    padding: 20px;
+    margin: 24px 0 0 15px;
+  }
+
+  .section-card,
+  .card.recently-added {
+    margin: 24px 10px 0 0;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 992px) {
+  .sidebar-layout {
+    margin-top: 10px;
+    width: 280px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .main-wrapper {
+    margin-left: 275px;
+    width: calc(100% - 275px);
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .logout a {
+    margin-bottom: 80px;
+  }
+}
