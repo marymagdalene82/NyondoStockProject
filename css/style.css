@@ -44,13 +44,11 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-  
 }
 
 .login-mobile-logo {
   width: 120px;
   height: auto;
- 
 }
 
 .login {
@@ -212,7 +210,7 @@ h6 {
   object-fit: cover;
 }
 
-.main-manager-dashboard {
+.main-manager-dashboard, .stock-list-main {
   background: #f6f6f6;
   border-radius: 10px;
   margin: 0 3px;
@@ -468,4 +466,86 @@ h6 {
   .logout a {
     margin-bottom: 80px;
   }
+}
+
+/* Stock List page */
+
+.inventory-wrapper{
+  margin-top: 35px;
+}
+
+.inventory-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding:0 20px;
+}
+.add-stock-button {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  background: #FFCB9A;
+  font-size: 1rem;
+}
+.add-stock-button:hover {
+  background: #ffb36c;
+  color: #fff;
+}
+.edit-price-button {
+  
+  background: #F2F2F2;
+}
+.edit-price-button:hover {
+  background: #D9D9D9;
+  color: #000;
+}
+.form-label-custom {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+ 
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 10px 0px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  font-size: 13.5px;
+  color: #1e293b;
+  background: #fff;
+  outline: none;
+  font-family: inherit;
+}
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  padding-left: 38px;
+}
+
+.search-bar i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 14px;
+}
+.btn-nyondo {
+  display: inline-flex;
+  align-items: center;
+  background: #FFCB9A;
+  color:#000;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
 }

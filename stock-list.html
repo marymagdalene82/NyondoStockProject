@@ -1,11 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock List</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stock List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
+  <!-- Sidebar -->
+  <div class="container-fluid sidebar-layout">
+    <div class="row">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="./images/Nyondo.png" alt="Nyondo Logo" width="180px" />
+        </div>
+        <div class="sidebar-section-label">MAIN</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="bi bi-speedometer"></i>Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-receipt-cutoff"></i>Sales Overview</a>
+          </li>
+        </ul>
+        <div class="sidebar-section-label">STOCK MANAGEMENT</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"><i class="bi bi-plus-circle"></i>Register Stock</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="stock-list.html"><i class="bi bi-card-list"></i>Stock List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="transport-calculator.html"><i class="bi bi-truck"></i>Transport Calculator</a>
+          </li>
+        </ul>
+        <div class="sidebar-section-label">PEOPLE</div>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="suppliers.html"><i class="bi bi-building"></i>Suppliers</a>
+          </li>
+        </ul>
+
+        <div class="logout">
+          <a class="nav-link" href="index.html"><i class="bi bi-box-arrow-right"></i>Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container-fluid main-wrapper">
+    <div class="topbar">
+      <div class="salutations">
+        <h5>Stock Management</h5>
+        <h6>Here's a list of all stock items</h6>
+      </div>
+      <div class="topbar-user">
+        <div class="user-info">
+          <h6>Rita A</h6>
+          <small>Store Manager</small>
+        </div>
+        <div class="avatar">
+          <img src="./images/happy.png" alt="User Avatar" width="40px" />
+        </div>
+      </div>
+    </div>
+    <div class="inventory-wrapper">
+      <div class="row inventory-header">
+        <div class="col-7 inventory-overview">
+          <h5>Inventory Overview</h5>
+          <p>Real-time tracking of warehouse stock levels and pricing.</p>
+        </div>
+        <div class="col">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end inventory-actions">
+            <a class="btn me-md-2 px-1 edit-price-button" type="button"><i class="bi bi-pen px-1"></i>Bulk Edit
+              Price</a>
+            <a href="stock-register.html" class="btn px-1 add-stock-button" type="button"><i
+                class="bi bi-plus-circle px-1"></i>Add new stock</a>
+          </div>
+        </div>
+      </div>
+      <div class="stock-list-main">
+        <div class="section-card section-card-stock mt-1 mb-4">
+          <div class="section-card-body" style="padding: 16px 30px">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-4">
+                <label class="form-label-custom">Search Product</label>
+                <div class="search-bar">
+                  <i class="bi bi-search"></i>
+                  <input type="text" class="form-control-custom" placeholder="Name, SKU..." />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label-custom">Category</label>
+                <select class="form-control-custom">
+                  <option value="">All Categories</option>
+                  <option>Building Materials</option>
+                  <option>Plumbing</option>
+                  <option>Electrical</option>
+                  <option>Paints &amp; Finishes</option>
+                  <option>Hardware &amp; Tools</option>
+                  <option>Roofing</option>
+                  <option>Timber &amp; Wood</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label-custom">Stock Status</label>
+                <select class="form-control-custom">
+                  <option value="">All</option>
+                  <option>In Stock</option>
+                  <option>Low Stock</option>
+                  <option>Out of Stock</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label-custom">Supplier</label>
+                <select class="form-control-custom">
+                  <option value="">All Suppliers</option>
+                  <option>Lafarge Malawi</option>
+                  <option>Steel Makers Ltd</option>
+                  <option>Plasco Industries</option>
+                  <option>Hardware Hub</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <a type="button" class="btn-nyondo primary w-100" style="justify-content: center">
+                  <i class="bi bi-funnel"></i> Filter
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
     
+  </div>
+    </div>
+
 </body>
+
 </html>
