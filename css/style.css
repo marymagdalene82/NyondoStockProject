@@ -210,7 +210,8 @@ h6 {
   object-fit: cover;
 }
 
-.main-manager-dashboard, .stock-list-main {
+.main-manager-dashboard,
+.stock-list-main {
   background: #f6f6f6;
   border-radius: 10px;
   margin: 0 3px;
@@ -470,7 +471,7 @@ h6 {
 
 /* Stock List page */
 
-.inventory-wrapper{
+.inventory-wrapper {
   margin-top: 35px;
 }
 
@@ -478,13 +479,13 @@ h6 {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding:0 20px;
+  padding: 0 20px;
 }
 .add-stock-button {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-  background: #FFCB9A;
+  background: #ffcb9a;
   font-size: 1rem;
 }
 .add-stock-button:hover {
@@ -492,11 +493,10 @@ h6 {
   color: #fff;
 }
 .edit-price-button {
-  
-  background: #F2F2F2;
+  background: #f2f2f2;
 }
 .edit-price-button:hover {
-  background: #D9D9D9;
+  background: #d9d9d9;
   color: #000;
 }
 .form-label-custom {
@@ -504,7 +504,6 @@ h6 {
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 6px;
- 
 }
 
 .form-control-custom {
@@ -537,8 +536,8 @@ h6 {
 .btn-nyondo {
   display: inline-flex;
   align-items: center;
-  background: #FFCB9A;
-  color:#000;
+  background: #ffcb9a;
+  color: #000;
   gap: 8px;
   padding: 9px 18px;
   border-radius: 9px;
@@ -548,4 +547,63 @@ h6 {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s;
+}
+
+/* Table css */
+.table-responsive {
+  border: 0px solid green;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.table-design {
+  min-width: 1450px;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-design caption {
+  caption-side: bottom;
+  padding-top: 14px;
+  color: #504e4c;
+  font-size: 14px;
+}
+
+.table-design > :not(caption) > * > * {
+  padding: 14px 12px;
+  vertical-align: middle;
+}
+
+.table-design thead th {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border-bottom-width: 2px;
+}
+
+.table-design tbody th,
+.table-design tbody td {
+  white-space: nowrap;
+}
+
+.table-design tbody tr:first-child > * {
+  border-top: 12px solid #fff;
+}
+
+.table-head-row th {
+  background-color: #a6a29f;
+  color: white;
+
+}
+.table-head-row th:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.table-head-row th:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
