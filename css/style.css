@@ -581,8 +581,9 @@ h6 {
   white-space: nowrap;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   border-bottom-width: 2px;
+  border-top-width: 2px;
 }
 
 .table-design tbody th,
@@ -595,7 +596,7 @@ h6 {
 }
 
 .table-head-row th {
-  background-color: #a6a29f;
+  /* background-color: #a6a29f; */
   color: white;
 
 }
